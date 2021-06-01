@@ -53,6 +53,12 @@ function getColumns() {
 function getArrayCell() {
     return resultArrayCell;
 }
+ 
+function random(){
+    let state;
+    return state;
+}
+
 
 function getNewArray() {
     return getNewArray;
@@ -72,8 +78,20 @@ function rules() {
     }
     
 }
+function initGame(){
+    
+    resultArrayCell = '';
+    createArrayCell();
+    
+    for(let x = 0; x<rows; x++){
+        for(let y=0; y<colmuns; y++){
+            var randomv = Math.random();
+            objecCell =  new objecCell();
+            arrayCells[x][y] = objecCell;
 
-
+        }
+    }
+}
 
 // 1. Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.
 // 2. Any live cell with more than three live neighbours dies, as if by overcrowding.
